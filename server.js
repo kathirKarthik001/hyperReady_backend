@@ -4,6 +4,14 @@ const docRoutes = require('./route/doc');
 const app = express();
 const port = 3000;
 const pool = require('./config/db');
+const cors = require('cors');
+
+// Enable CORS
+app.use(cors({
+    origin: 'http://localhost:3000', // Allow frontend origin
+    methods: ['GET', 'POST'], // Allow specific methods
+    credentials: true // If you use cookies (not needed here)
+  }));
 
 app.use(express.json());
 
