@@ -8,8 +8,8 @@ const cors = require('cors');
 
 // Enable CORS
 app.use(cors({
-    origin: 'http://localhost:3000', // Allow frontend origin
-    methods: ['GET', 'POST'], // Allow specific methods
+    origin: '*', // Allow frontend origin
+    methods: ['GET', 'POST' , 'PUT' , 'DELETE'], // Allow specific methods
     credentials: true // If you use cookies (not needed here)
   }));
 
